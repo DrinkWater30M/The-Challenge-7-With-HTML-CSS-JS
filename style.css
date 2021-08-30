@@ -1,0 +1,784 @@
+.valuesOfStaffInProject {
+  color: hsl(356, 100%, 66%);
+  color: hsl(355, 100%, 74%);
+  color: hsl(208, 49%, 24%);
+
+  color: hsl(0, 0%, 100%);
+  color: hsl(240, 2%, 79%);
+  color: hsl(207, 13%, 34%);
+  color: hsl(240, 10%, 16%);
+
+  color: hsl(13, 100%, 72%);
+  color: hsl(353, 100%, 62%);
+
+  color: hsl(237, 17%, 21%);
+  color: hsl(237, 23%, 32%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  padding: 0 11.5%;
+  background: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
+  background: url(./images/bg-pattern-intro.svg) no-repeat -400px,
+    linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+  background-size: auto;
+  border-bottom-left-radius: 15em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+header .header-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 60px;
+}
+
+header .header-top .menu {
+  width: 100%;
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-top .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+header .header-top .navigation .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+header .header-top .navigation .title h4 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  padding-right: 20px;
+  position: relative;
+}
+
+header .header-top .navigation .title h4::after {
+  content: "";
+  height: 100%;
+  padding: 0 10px;
+  background: url(./images/icon-arrow-light.svg) no-repeat center;
+  position: absolute;
+}
+
+header .header-top .navigation .title h4.active::after {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+}
+
+header .header-top .navigation .title h4:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+
+header .header-top .navigation .navigation-list {
+  position: absolute;
+  display: none;
+}
+
+header .header-top .navigation .navigation-list.active {
+  display: block;
+}
+
+header .header-top .navigation .navigation-list ul {
+  margin-top: 20px;
+  padding: 30px 20px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.5em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+header .header-top .navigation .navigation-list ul li a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 14px;
+  color: hsl(240, 10%, 16%);
+}
+
+header .header-top .navigation .navigation-list ul li a:hover {
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+header .header-top .dialog ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+header .header-top .dialog ul li a {
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+header .header-top .dialog ul li:nth-child(2) a {
+  padding: 15px 35px;
+  color: hsl(356, 100%, 66%);
+  font-weight: 700;
+  background: hsl(0, 0%, 100%);
+  border-radius: 2em;
+}
+
+header .header-top .dialog ul li:nth-child(2) a:hover {
+  color: hsl(0, 0%, 100%);
+  background: hsl(355, 100%, 74%);
+  transition: 0.5s ease;
+}
+
+header .header-center {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+header .header-center h1 {
+  font-size: 60px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+header .header-center h3 {
+  margin-top: 20px;
+  text-align: center;
+  color: hsl(240, 2%, 79%);
+  font-weight: 300;
+}
+
+header .header-center .choice {
+  margin-top: 45px;
+}
+
+header .header-center .choice ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+header .header-center .choice ul li a {
+  width: 140px;
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 2em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+header .header-center .choice ul li:nth-child(1) a {
+  color: hsl(356, 100%, 66%);
+  background: hsl(0, 0%, 100%);
+}
+
+header .header-center .choice ul li:nth-child(1) a:hover {
+  color: hsl(0, 0%, 100%);
+  background: hsl(355, 100%, 74%);
+  transition: 0.5s ease;
+}
+
+header .header-center .choice ul li:nth-child(2) a {
+  color: hsl(0, 0%, 100%);
+  border: solid 2px hsl(0, 0%, 100%);
+}
+
+header .header-center .choice ul li:nth-child(2) a:hover {
+  color: hsl(356, 100%, 66%);
+  background: hsl(0, 0%, 100%);
+  transition: 0.5s ease;
+}
+
+main {
+  width: 100%;
+}
+.design {
+  width: 100%;
+  background: url(./images/illustration-editor-desktop.svg) no-repeat;
+  background-position: 760px 80px;
+  padding: 160px 11.5%;
+}
+
+.design h1 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  text-align: center;
+}
+
+.design .main {
+  margin-top: 110px;
+  width: 530px;
+}
+
+.design .main h2 {
+  color: hsl(208, 49%, 24%);
+  font-size: 30px;
+}
+
+.design .main p {
+  margin-top: 25px;
+  font-size: 15px;
+  color: hsl(207, 13%, 34%);
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.design .main div:nth-child(2) {
+  margin-top: 70px;
+}
+
+.responsive {
+  position: relative;
+  background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  background: url(./images/bg-pattern-circles.svg) no-repeat -210px -500px,
+    linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+  padding: 120px 11.5%;
+  border-radius: 0 5em 0 5em;
+}
+
+.responsive::before {
+  content: "";
+  width: 100%;
+  height: 140%;
+  position: absolute;
+  top: -75px;
+  left: 6.25%;
+  background-image: url(./images/illustration-phones.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.responsive .state {
+  width: 530px;
+  margin: 0 0 0 auto;
+}
+
+.responsive .state h2 {
+  font-size: 40px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: -1px;
+  word-spacing: -1px;
+}
+
+.responsive .state p {
+  margin-top: 20px;
+  color: hsl(240, 2%, 79%);
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+.description {
+  width: 100%;
+  background-image: url(./images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -275px 100px;
+  padding: 305px 11.5%;
+}
+
+.description .main {
+  margin: 0 0 0 auto;
+  width: 530px;
+}
+
+.description .main h2 {
+  font-size: 30px;
+  color: hsl(208, 49%, 24%);
+  font-weight: 600;
+}
+
+.description .main p {
+  margin-top: 25px;
+  color: hsl(207, 13%, 34%);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.description .main div:nth-child(2) {
+  margin-top: 70px;
+}
+
+footer {
+  width: 100%;
+  padding-top: 80px;
+  background: hsl(240, 10%, 16%);
+  border-radius: 0 5em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.information {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.information .footer-logo {
+  margin-left: 11%;
+}
+
+.information .main {
+  margin-left: 12.5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 190px;
+}
+
+.information .main h4 {
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 500;
+}
+
+.information .main ul {
+  margin-top: 35px;
+}
+
+.information .main ul li {
+  margin-top: 15px;
+}
+
+.information .main ul li a {
+  color: hsl(240, 2%, 79%);
+}
+
+.information .main ul li a:hover {
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+
+.attribution {
+  margin: 30px 0;
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 1300px) {
+  .design {
+    background-position: 680px 80px;
+  }
+
+  .responsive::before {
+    left: -200px;
+  }
+
+  .description {
+    background-position: -550px 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 0 5%;
+    border-bottom-left-radius: 10em;
+  }
+
+  header .header-top {
+    margin-top: 30px;
+  }
+
+  header .header-top .menu {
+    margin-left: 30px;
+  }
+
+  header .header-top .navigation {
+    gap: 10px;
+  }
+
+  header .header-top .navigation .navigation-list ul {
+    margin-top: 10px;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  header .header-top .dialog ul li:nth-child(2) a {
+    padding: 10px 20px;
+  }
+
+  header .header-center h3 {
+    margin-top: 10px;
+  }
+
+  header .header-center .choice {
+    margin-top: 30px;
+  }
+
+  .design {
+    background-position: 760px 80px;
+    padding: 120px 11.5%;
+  }
+
+  .design .main {
+    margin-top: 80px;
+    width: 530px;
+  }
+
+  .responsive::before {
+    background: none;
+  }
+
+  .description {
+    background-image: none;
+    padding: 100px 11.5%;
+  }
+
+  .information {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .information .footer-logo {
+    margin: 0;
+  }
+
+  .information .main {
+    margin: 20px 0;
+    gap: 150px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header .header-top .menu {
+    position: absolute;
+    width: 90%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 40px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 0.5em;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .header-top .menu.active {
+    display: flex;
+  }
+
+  header .header-top .button-menu {
+    margin: 0 0 0 auto;
+    width: 2em;
+    height: 2em;
+    background: url(./images/icon-hamburger.svg) no-repeat center;
+  }
+
+  header .header-top .button-menu.active {
+    background: url(./images/icon-close.svg) no-repeat center;
+  }
+
+  header .header-top .navigation {
+    width: 100%;
+    padding-bottom: 45px;
+    border-bottom: 2px solid hsl(240, 2%, 79%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
+
+  header .header-top .navigation .title h4 {
+    width: 100%;
+    color: hsl(240, 10%, 16%);
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  header .header-top .navigation .title h4::after {
+    background: url(./images/icon-arrow-dark.svg) no-repeat center;
+  }
+
+  header .header-top .navigation .navigation-list {
+    position: relative;
+    display: none;
+  }
+
+  header .header-top .navigation .nav {
+    width: 100%;
+  }
+
+  header .header-top .navigation .navigation-list {
+    width: 100%;
+  }
+
+  header .header-top .navigation .navigation-list ul {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: hsl(0, 0%, 100%);
+    background-color: hsl(240, 2%, 79%);
+    border-radius: 0.2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header .header-top .navigation .navigation-list ul li {
+    margin: auto;
+  }
+
+  header .header-top .navigation .navigation-list ul li a {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: hsl(240, 10%, 16%);
+  }
+
+  header .header-top .dialog {
+    margin-top: 40px;
+  }
+
+  header .header-top .dialog ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+  }
+
+  header .header-top .dialog ul li a {
+    color: hsl(240, 10%, 16%);
+  }
+
+  header .header-top .dialog ul li:nth-child(2) a {
+    padding: 15px 35px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    border-radius: 2em;
+  }
+
+  header .header-center h1 {
+    font-size: 50px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .design h1 {
+    font-size: 30px;
+  }
+
+  .design .main {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .design .main h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .design .main p {
+    text-align: justify;
+  }
+
+  .design .main div:nth-child(2) {
+    margin-top: 50px;
+  }
+
+  .responsive .state {
+    width: 100%;
+    margin: auto;
+  }
+
+  .responsive .state h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .responsive .state p {
+    text-align: justify;
+  }
+
+  .description .main {
+    margin: auto;
+    width: 100%;
+  }
+
+  .description .main h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .description .main p {
+    text-align: justify;
+  }
+
+  .information .main {
+    gap: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    border-bottom-left-radius: 5em;
+  }
+
+  header .header-center h1 {
+    font-size: 35px;
+  }
+
+  header .header-center h3 {
+    font-size: 15px;
+  }
+
+  .design {
+    display: block;
+    background: url(./images/illustration-editor-mobile.svg) no-repeat;
+    background-position: center 180px;
+  }
+
+  .design h1 {
+    font-size: 25px;
+  }
+
+  .design .main {
+    margin-top: 400px;
+  }
+
+  .design .main h2 {
+    font-size: 20px;
+  }
+
+  .design .main p {
+    font-size: 14px;
+  }
+
+  .responsive .state h2 {
+    font-size: 24px;
+  }
+
+  .responsive {
+    padding-top: 300px;
+  }
+  .responsive::before {
+    display: block;
+    top: -15%;
+    left: 0;
+    background: url(./images/illustration-phones.svg) no-repeat;
+    background-size: contain;
+  }
+
+  .responsive .state p {
+    font-size: 14px;
+  }
+
+  .description .main h2 {
+    font-size: 25px;
+  }
+
+  .description {
+    background-image: url(./images/illustration-laptop-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 0;
+    padding-top: 280px;
+  }
+
+  .description .main p {
+    font-size: 14px;
+  }
+
+  .information .main {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .information .main h4 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .information .main ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .information .main ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
